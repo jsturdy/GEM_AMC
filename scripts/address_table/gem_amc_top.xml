@@ -14,7 +14,7 @@
           fw_master_bus_signal="ipb_mosi_i"
           fw_slave_bus_signal="ipb_miso_o"
           fw_reg_addr_msb="5"
-          fw_reg_addr_lsb="0">
+          fw_reg_addr_lsb="0">evka85
       <node id="CTRL" address="0x0" description="TTC control">
         <node id="MODULE_RESET" address="0x0" mask="0x80000000" permission="w" description="TTC module reset"
               fw_write_pulse_signal="ttc_ctrl.reset_local"/>
@@ -761,11 +761,11 @@
                 fw_signal="input_status_arr(${OH_IDX}).eb_last_timer"/>
         </node>
 
-        <node id="LASTBLOCK" address="0x00000009"  permission="r"  mode="incremental"  size="7" >
-        <!-- <node id="LASTBLOCK${BLOCK_IDX}"  address="0x9" permission="r" mask="0xffffffff" -->
-        <!--       description="contains the last 192+32 bits received from the VFAT and OH" -->
-        <!--       generate="true" generate_size="7" generate_address_step="0x1" generate_idx_var="BLOCK_IDX" -->
-        <!--       fw_signal="input_status_arr(${OH_IDX}).ep_vfat_block_data(${BLOCK_IDX})"> -->
+        <!--node id="LASTBLOCK" address="0x00000009"  permission="r"  mode="incremental"  size="7" -->
+        <node id="LASTBLOCK${BLOCK_IDX}"  address="0x9" permission="r" mask="0xffffffff"
+              description="contains the last 192+32 bits received from the VFAT and OH"
+              generate="true" generate_size="7" generate_address_step="0x1" generate_idx_var="BLOCK_IDX"
+              fw_signal="input_status_arr(${OH_IDX}).ep_vfat_block_data(${BLOCK_IDX})">
         </node>
       </node>
     </node>
