@@ -1652,7 +1652,7 @@
             </node>
 
             <node id="ScanController"  address="0x2000" description="Module to perform threshold and latency scans in the firmware">
-              <node id="THLAT"  address="0x0000000"  permission="rw"
+              <node id="THLAT"  address="0x0000"  permission="rw"
                     description="Control the onboard threshold/latency scan routine (per VFAT)">
                 <node id="START"  address="0x0"  mask="0x1"  permission="w"
                       description="Start the specified scan routine
@@ -1708,7 +1708,7 @@
                       description="Local reset of the module"/>
               </node>
 
-              <node id="ULTRA"  address="0xB000000"  permission="rw"
+              <node id="ULTRA"  address="0xB000"  permission="rw"
                     description="Control the onboard ultra threshold/latency scan routine">
                 <node id="START"  address="0x0"  mask="0x1"  permission="w"
                       description="Start the specified scan routine
@@ -1768,7 +1768,7 @@
                       description="Local reset of the module"/>
               </node>
 
-              <node id="DAC"    address="0x2000000"  permission="rw"
+              <node id="DAC"    address="0x2000"  permission="rw"
                     description="Control the onboard DAC scan routine">
                 <node id="START"    address="0x0"  mask="0x1"  permission="w"
                       description="Start the specified scan routine
