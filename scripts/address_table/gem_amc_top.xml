@@ -14,7 +14,7 @@
           fw_master_bus_signal="ipb_mosi_i"
           fw_slave_bus_signal="ipb_miso_o"
           fw_reg_addr_msb="5"
-          fw_reg_addr_lsb="0">evka85
+          fw_reg_addr_lsb="0">
       <node id="CTRL" address="0x0" description="TTC control">
         <node id="MODULE_RESET" address="0x0" mask="0x80000000" permission="w" description="TTC module reset"
               fw_write_pulse_signal="ttc_ctrl.reset_local"/>
